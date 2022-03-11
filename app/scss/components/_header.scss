@@ -1,0 +1,122 @@
+.header {
+  padding: 50px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 36px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $accent;
+  }
+
+  &__img {
+    margin-right: 15px;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  
+  &__list {
+    display: flex;
+  }
+
+  &__link {
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.3s;
+    
+    &:hover {
+      color: $accent;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 35px;
+  }
+}
+
+.user-nav {
+  display: flex;
+  align-items: center;
+
+  &__link--radius {
+    border-radius: 50%;
+    background-color: $grey;
+    padding: 18px 18px;
+    position: relative;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__box {
+    background-color: $brown;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5em;
+    padding: 20px 40px 10px;
+    margin-right: 20px;
+    width: 180px;
+    position: relative;
+    
+    &::after {
+      content: '';
+      background-color: $brown-light;
+      height: 32px;
+      width: 1px;
+      top: 10px;
+      left: 90px;
+      position: absolute;
+    }
+  }
+
+  &__link {
+    position: relative;
+    
+    svg {
+      transition: transform 0.2s;
+    }
+
+    svg:hover {
+      transform: scale(120%);
+    } 
+  }
+
+  &__num {
+    position: absolute;
+    background-color: $white;
+    color: $default;
+    border-radius: 50%;
+    top: -8px;
+    right: -9px;
+    font-size: 10px;
+    padding: 0 5px;
+    z-index: 5;
+  }
+
+  &__btn {
+    border: none;
+    border-radius: 50%;
+    background-color: $accent;
+    padding: 15px 15px;
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s;
+
+    &:hover {
+      transform: rotate(90deg);
+    }
+  }
+}
